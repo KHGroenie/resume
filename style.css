@@ -12,9 +12,11 @@ ul {
 }
 .rounded-img {
     z-index: 10;
+    position: relative;
 }
 .circular-container {
-    z-index: 5;
+    /* z-index: -5;
+    position: relative; */
 }
 /* Section Properties */
 section {
@@ -31,8 +33,7 @@ section {
 
 /* Font Properties */
 .main {
-    font-family: 'Saira Extra Condensed', sans-serif;
-     font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
     line-height: 1.5rem;
     color: #5d6369;
 }
@@ -48,7 +49,7 @@ section {
     font-weight: 700;
     line-height: 7rem;
     margin: 0;
-    background: linear-gradient(45deg, #831ab4, #1d9efd, #fc45dc);
+    background: linear-gradient(45deg, #a9064c, #e3656a, #692164);
     /* Add gradient background */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -100,7 +101,7 @@ section {
 
 /* Colors */
 .red {
-    color: #720394;;
+    color: #050505;
 }
 
 
@@ -113,7 +114,7 @@ section {
 .nav {
     width: 18%;
     height: 100%;
-    background: linear-gradient(45deg, #831ab4, #1d9efd, #fc45dc);
+    background: linear-gradient(45deg, #a9064c, #e3656a, #692164);
         /* Replace with your desired gradient colors */
     position: fixed; 
     display: flex;
@@ -123,7 +124,7 @@ section {
 }
 .nav a {
     color: #060606;
-    font-family: 'Saira Extra Condensed', sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     text-transform: uppercase;
     display: block;
     padding: 10px;
@@ -135,13 +136,13 @@ section {
 .nav a:active, .nav a:focus-within {
     color: #ffffff;
 }
-.rounded-img {
+/* .rounded-img {
     border-radius: 50%;
     width: 10rem;
     height: 10rem;
     border: .5rem solid rgba(12, 12, 12, 0.2);
     z-index: -5px;
-}
+} */
 .nav-title {
     display: none;
 }
@@ -162,39 +163,38 @@ section {
 .sub-title {
     font-size: 1.5rem;
     font-weight: 500;
-    color: #720394;
+    color: #070707;
     line-height: 2rem;
     margin: 0;
-}
-.social-icons {
+}.social-icons {
     display: flex;
     position: absolute;
     margin-top: 3vh;
     left: -40px;
-    background: (circle, rgba(131, 58, 180, 1) 20%, rgba(29, 158, 253, 0.9640231092436975) 74%, rgba(252, 69, 220, 1) 100%);
 }
+
 .social-icons .icons {
     display: block;
     position: relative;
     flex-direction: row;
     margin-left: 15px;
-    background: (circle, rgba(131, 58, 180, 1) 20%, rgba(29, 158, 253, 0.9640231092436975) 74%, rgba(252, 69, 220, 1) 100%);
-
 }
+
 .circle {
     font-size: 3.5rem;
-    background: radial-gradient(circle, rgba(131, 58, 180, 1) 20%, rgba(29, 158, 253, 0.9640231092436975) 74%, rgba(252, 69, 220, 1) 100%);
+    background: radial-gradient(circle, #a9064c 20%, #e3656a 74%, #692164 100%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* Add for standard support */
+    color: transparent;
     display: inline-block;
     position: relative;
-    color: #fff;
     transition: color 0.3s ease;
 }
 
-.icons:hover .circle {
-    color: #f6eeee;
-    transform: scale(1.2);
+.circle:hover {
+    color: #fff;
+    /* Change the text color on hover */
 }
 /* Change the color property for social media icons */
 .social-icon {
@@ -211,7 +211,7 @@ section {
 
 /* Add gradient background to social media icons */
 .icons:hover .social-icon {
-    color: #720394;
+    color: #000;
     transform: scale(10px);
     /* Change to black or the desired color on hover */
 }
@@ -275,12 +275,12 @@ section {
       left: 0;
       width: 100%;
       height: 50px;
-      background-color: linear-gradient(45deg, #831ab4, #1d9efd, #fc45dc);
+      background: radial-gradient(circle, #a9064c 20%, #e3656a 74%, #692164 100%);
       /* Replace with your desired gradient colors */
       z-index: 100;
   }
     .menu-bars .fa {
-    color: #720394;
+    color: #fff;
     font-size: 30px;
     display: initial;
     position: absolute;
@@ -307,7 +307,7 @@ section {
         display: none;
     }
     .nav-title {
-        color: linear-gradient(45deg, #831ab4, #1d9efd, #fc45dc);
+        color: radial-gradient(circle, #a9064c 20%, #e3656a 74%, #692164 100%);
         font-size: 32px;
         display: initial;
         position: absolute;
@@ -374,3 +374,7 @@ section {
     .skill-icon { font-size: 2.5rem; }
     #diamond { font-size: 2rem; }    
 }
+  .nav-title {
+      color: white;
+      /* Set the color to white for smaller screens */
+  }
